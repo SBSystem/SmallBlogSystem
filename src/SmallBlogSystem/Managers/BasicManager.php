@@ -21,7 +21,7 @@ abstract class BasicManager
      * @return mixed
      * @usage This function is used to initialize manager
      */
-    protected abstract function init($class);
+    protected abstract function init();
 
     /**
      * @return mixed
