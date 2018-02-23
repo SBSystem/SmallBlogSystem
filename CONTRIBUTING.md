@@ -1,17 +1,17 @@
-# Contributing Rules 
-## Contributing rules
-When you want to contribute this repository, you will join to organization. You may do this creating a new issue.
-## Code rules
+# Zasady współpracy
+## Zasady współpracy
+Jeżeli chcesz współpracować, i rowijać ten projekt powinieneś dołączyć do oorganizacji. Możesz to zrobić poprzez zgłoszenie swojej kandydatury w issue.
+## Zasady kodu
 ### PHP
-PHP MUST use PSR-2 standard.
-# Contributing info
-## Branches
-When you want to create a new feature, you will create a new branch with this style:
-`feature/FeatureInfo` for new features,
-`bug/bugInfo` for bug fixes,
-`basic/basicInfo` for update basic files (contributing, readme etc.)
-## Commits
-Commits MUST use this style
+Kod PHP MUSI przestrzegać standard PSR-2.
+# Informacje o współpracy
+## Branche
+Jeżeli chcesz utworzyć nowy feature, powinieneś stworzyć nowego brancha korzystając z tego wzoru:
+`feature/FeatureInfo` dla nowych featurów,
+`bug/bugInfo` dla naprawy bugów,
+`basic/basicInfo` dla aktualizacji bazowych plików (contributing, readme etc.)
+## Commity
+Commity muszą być pisane w takim stylu:
 `changes`
-## Pull Requests
-Pull Request MUST be correctly described. 
+## Pull Requesty
+Pull Requesty mają być odpowiednio opisane!
