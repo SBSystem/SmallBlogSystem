@@ -30,8 +30,14 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
-        if ('/' === $pathinfo) {
-            throw new Symfony\Component\Routing\Exception\NoConfigurationException();
+        // _twig_error_test
+        if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => '_twig_error_test')), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
+        }
+
+        // index
+        if ('/index' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\index::indexPage',  '_route' => 'index',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

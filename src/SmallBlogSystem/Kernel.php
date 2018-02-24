@@ -13,7 +13,7 @@ class Kernel
     private $config;
     protected $successfullyInitialized;
 
-    public function __construct(KernelStartInfo $info)
+    public function __construct($info)
     {
         $this->successfullyInitialized = false;
         $this->logger = null;
@@ -45,6 +45,7 @@ class Kernel
         $this->successfullyInitialized = true;
         $this->initLogger();
         $this->initConfig();
+
     }
     protected function reboot()
     {
@@ -59,6 +60,7 @@ class Kernel
     private function initLogger()
     {
         $this->logger = new LogManager(__CLASS__);
+        $this->logger->log(LogLevel::KERNEL, 'System loaded.');
     }
     public function log(LogLevel $priority, $logContent): boolean
     {

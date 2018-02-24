@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb4304817157775fbd3b8cb496c958b0f
+class ComposerStaticInitd73f67fb36af0f2ff0793a53f4e4060d
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -35,7 +35,9 @@ class ComposerStaticInitb4304817157775fbd3b8cb496c958b0f
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\ClassLoader\\' => 30,
             'Symfony\\Component\\Cache\\' => 24,
+            'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
+            'Symfony\\Bridge\\Twig\\' => 20,
         ),
         'P' => 
         array (
@@ -124,9 +126,17 @@ class ComposerStaticInitb4304817157775fbd3b8cb496c958b0f
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
         ),
+        'Symfony\\Bundle\\TwigBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/twig-bundle',
+        ),
         'Symfony\\Bundle\\FrameworkBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/framework-bundle',
+        ),
+        'Symfony\\Bridge\\Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/twig-bridge',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -167,9 +177,9 @@ class ComposerStaticInitb4304817157775fbd3b8cb496c958b0f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb4304817157775fbd3b8cb496c958b0f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb4304817157775fbd3b8cb496c958b0f::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb4304817157775fbd3b8cb496c958b0f::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd73f67fb36af0f2ff0793a53f4e4060d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd73f67fb36af0f2ff0793a53f4e4060d::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd73f67fb36af0f2ff0793a53f4e4060d::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
