@@ -18,6 +18,8 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         $this->logger = $logger;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
+        '_twig_error_test' => array (  0 =>   array (    0 => 'code',    1 => '_format',  ),  1 =>   array (    '_controller' => 'twig.controller.preview_error:previewErrorPageAction',    '_format' => 'html',  ),  2 =>   array (    'code' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '.',      2 => '[^/]++',      3 => '_format',    ),    1 =>     array (      0 => 'variable',      1 => '/',      2 => '\\d+',      3 => 'code',    ),    2 =>     array (      0 => 'text',      1 => '/_error',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'index' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'App\\Controller\\index::indexPage',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/index',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }
     }
