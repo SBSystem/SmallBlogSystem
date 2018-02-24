@@ -2,6 +2,7 @@
 
 namespace App\SmallBlogSystem;
 
+use App\SmallBlogSystem\Level\KernelStartInfo;
 use App\SmallBlogSystem\Managers\ConfigManager;
 use App\SmallBlogSystem\Managers\LogManager;
 use App\SmallBlogSystem\Level\LogLevel;
@@ -12,13 +13,36 @@ class Kernel
     private $config;
     protected $successfullyInitialized;
 
-    public function __construct()
+    public function __construct(KernelStartInfo $info)
     {
         $this->successfullyInitialized = false;
         $this->logger = null;
         $this->config = null;
+        if ($info === KernelStartInfo::BOOT) {
+            $this->boot();
+        } else if ($info === KernelStartInfo::REBOOT) {
+            $this->reboot();
+        } else if ($info === KernelStartInfo::SHUTDOWN) {
+            $this->shutdown();
+        } else {
+            $this->boot();
+        }
+    }
+
+    public function boot()
+    {
+        $this->successfullyInitialized = true;
         $this->initLogger();
         $this->initConfig();
+    }
+    public function reboot()
+    {
+        $this->shutdown();
+        $this->boot();
+    }
+    public function shutdown()
+    {
+        $this->successfullyInitialized = false;
     }
 
     private function initLogger()
