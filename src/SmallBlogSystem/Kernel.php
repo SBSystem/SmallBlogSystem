@@ -28,19 +28,30 @@ class Kernel
             $this->boot();
         }
     }
-
-    public function boot()
+    public function changeSystemStatus(KernelStartInfo $kernelStatus)
+    {
+        if ($kernelStatus === KernelStartInfo::BOOT) {
+            $this->boot();
+        } else if ($kernelStatus === KernelStartInfo::REBOOT) {
+            $this->reboot();
+        } else if ($kernelStatus === KernelStartInfo::SHUTDOWN) {
+            $this->shutdown();
+        } else {
+            $this->boot();
+        }
+    }
+    protected function boot()
     {
         $this->successfullyInitialized = true;
         $this->initLogger();
         $this->initConfig();
     }
-    public function reboot()
+    protected function reboot()
     {
         $this->shutdown();
         $this->boot();
     }
-    public function shutdown()
+    protected function shutdown()
     {
         $this->successfullyInitialized = false;
     }
