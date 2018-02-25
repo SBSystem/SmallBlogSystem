@@ -13,10 +13,8 @@ class config
         'databasePort' => 1666
     ];
 
-    public static function getConfigArray($class)
+    public static function getConfigArray()
     {
-        if($class === "Kernel") {
             return config::$array;
-        }
     }
 }

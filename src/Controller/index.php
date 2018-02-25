@@ -12,10 +12,14 @@ class index extends Controller
 {
     public function indexPage()
     {
-        $kernel = new Kernel(KernelStartInfo::BOOT);
-        $kernel->log(LogLevel::INFO, 'System loaded.');
+        //$kernel = new Kernel(KernelStartInfo::BOOT);
+        //$kernel->log(LogLevel::INFO, 'System loaded.');
         return $this->render('index.html.twig', array(
-            'title' => IndexTemplatesReturn::get('title')
+            'title' => IndexTemplatesReturn::get('title'),
+            'charset' => IndexTemplatesReturn::get('charset'),
+            'pageAuthor' => IndexTemplatesReturn::get('pageAuthor'),
+            'generator' => IndexTemplatesReturn::get('generator')
+
         ));
     }
 }
