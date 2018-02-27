@@ -2,8 +2,6 @@
 
 namespace App\SmallBlogSystem\Managers;
 
-use App\SmallBlogSystem\Level\LogLevel;
-
 class LogManager extends BasicManager
 {
     private $initialized;
@@ -30,7 +28,7 @@ class LogManager extends BasicManager
         }
 
     }
-    public function log(LogLevel $priority, $logValue): boolean
+    public function log($priority, $logValue): boolean
     {
         if($this->initialized === true) {
             $log = '['.$priority.'] '.$logValue;
