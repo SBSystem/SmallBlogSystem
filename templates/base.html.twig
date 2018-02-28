@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="{% block charset %}{% endblock %}">
+        <meta name="author" content="{% block authorMeta %}{% endblock %}">
+        <meta name="generator" content="{% block generator %}{% endblock %}">
+        <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}
+
+            <!-- Navigation -->
+
+        {% endblock %}
+        {% block javascript %}{% endblock %}
     </body>
 </html>

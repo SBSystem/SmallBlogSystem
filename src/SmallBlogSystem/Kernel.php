@@ -28,7 +28,7 @@ class Kernel
             $this->boot();
         }
     }
-    public function changeSystemStatus(KernelStartInfo $kernelStatus)
+    public function changeSystemStatus($kernelStatus)
     {
         if ($kernelStatus === KernelStartInfo::BOOT) {
             $this->boot();
@@ -62,7 +62,7 @@ class Kernel
         $this->logger = new LogManager(__CLASS__);
         $this->logger->log(LogLevel::KERNEL, 'System loaded.');
     }
-    public function log(LogLevel $priority, $logContent): boolean
+    public function log($priority, $logContent): boolean
     {
         if($this->successfullyInitialized) {
             $this->logger->log($priority, $logContent);

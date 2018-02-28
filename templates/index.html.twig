@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html.twig' %}
 
-</head>
-<body>
+{% block charset %}{{ charset }}{% endblock %}
+{% block authorMeta %}{{ pageAuthor }}{% endblock %}
+{% block generator %}{{ generator }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
-{{ title }}
+{% block body %}
 
-</body>
-</html>
+    <h1>Hello World!</h1>
+
+{% endblock %}
