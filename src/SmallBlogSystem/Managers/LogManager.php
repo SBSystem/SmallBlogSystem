@@ -6,12 +6,10 @@ class LogManager extends BasicManager
 {
     private $initialized;
 
-    public  function __construct($class)
+    public  function __construct()
     {
         $this->initialized = false;
-        if($class === "Kernel") {
             $this->init();
-        }
     }
     public  function getManager(): bool
     {

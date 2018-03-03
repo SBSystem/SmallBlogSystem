@@ -59,7 +59,7 @@ class Kernel
 
     private function initLogger()
     {
-        $this->logger = new LogManager(__CLASS__);
+        $this->logger = new LogManager();
         $this->logger->log(LogLevel::KERNEL, 'System loaded.');
     }
 
@@ -81,7 +81,7 @@ class Kernel
     }
     public function initConfig()
     {
-        $this->config = new ConfigManager(__CLASS__);
+        $this->config = new ConfigManager();
     }
 
     /**

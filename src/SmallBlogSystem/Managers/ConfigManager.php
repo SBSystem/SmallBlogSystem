@@ -6,14 +6,10 @@ class ConfigManager extends BasicManager
 {
     private $initialized;
 
-    public function __construct($class)
+    public function __construct()
     {
         $this->initialized = false;
-        if($class === "Kernel") {
-            $this->init();
-        } else {
-            return false;
-        }
+        $this->init();
     }
     public  function getManager()
     {
@@ -30,8 +26,8 @@ class ConfigManager extends BasicManager
     public function getParam($param)
     {
         if($this->initialized === true) {
-            $configArray = config::getConfigArray("Kernel");
-            return $configArray($param);
+            $configArray = config::getConfigArray();
+            return $configArray($param);;
         } else {
             return false;
         }
