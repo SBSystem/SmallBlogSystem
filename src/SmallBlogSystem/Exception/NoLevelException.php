@@ -6,6 +6,6 @@ class NoLevelException extends Exception
 {
     public function __toString()
     {
-        return '<b>NoLevelException:</b> '.$this->getMessage();
+        return '<b>NoLevelException:</b> No level given in '.$this->getMessage();
     }
 }
