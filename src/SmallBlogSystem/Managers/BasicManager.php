@@ -11,10 +11,9 @@ abstract class BasicManager
 {
     /**
      * BasicManager constructor.
-     * @param $class
      * @usage Constructor.
      */
-    public abstract function __construct($class);
+    public abstract function __construct();
 
     /**
      * @param $class
