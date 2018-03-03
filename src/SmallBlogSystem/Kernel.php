@@ -68,7 +68,7 @@ class Kernel
      * @return boolean
      * @deprecated since version 0.1, to be removed in 1.0. Use new ConfigManager object
      */
-    public function log($priority, $logContent): boolean
+    public function log($priority, $logContent): bool
     {
         trigger_error(sprintf('Function %s is deprecated!', __METHOD__));
 

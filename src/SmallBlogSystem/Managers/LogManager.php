@@ -13,11 +13,11 @@ class LogManager extends BasicManager
             $this->init();
         }
     }
-    public  function getManager(): boolean
+    public  function getManager(): bool
     {
         return $this->initialized;
     }
-    protected function init(): boolean
+    protected function init(): bool
     {
         if(file_exists('log.txt')) {
             $this->initialized = true;
@@ -28,7 +28,7 @@ class LogManager extends BasicManager
         }
 
     }
-    public function log($priority, $logValue): boolean
+    public function log($priority, $logValue): bool
     {
         if($this->initialized === true) {
             $log = '['.$priority.'] '.$logValue;
