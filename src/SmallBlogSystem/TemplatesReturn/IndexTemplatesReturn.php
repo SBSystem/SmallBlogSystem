@@ -10,7 +10,7 @@ class IndexTemplatesReturn extends BasicTemplatesReturn
        'title' => 'Tytuł strony głównej',
         'charset' => 'UTF-8',
         'pageAuthor' => 'Author',
-        'generator' => 'GENERATOR'
+        'generator' => 'SmallBlogSystem'
     );
 
     public static function get($param)
