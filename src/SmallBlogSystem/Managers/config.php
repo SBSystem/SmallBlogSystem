@@ -13,7 +13,7 @@ class config
         'databasePort' => 1666
     ];
 
-    public static function getConfigArray()
+    public static function getConfigArray(): array
     {
             return config::$array;
     }

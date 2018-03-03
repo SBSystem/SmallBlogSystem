@@ -62,8 +62,16 @@ class Kernel
         $this->logger = new LogManager(__CLASS__);
         $this->logger->log(LogLevel::KERNEL, 'System loaded.');
     }
-    public function log($priority, $logContent): boolean
+
+    /**
+     * @param $priority, logContent
+     * @return boolean
+     * @deprecated since version 0.1, to be removed in 1.0. Use new ConfigManager object
+     */
+    public function log($priority, $logContent): bool
     {
+        trigger_error(sprintf('Function %s is deprecated!', __METHOD__));
+
         if($this->successfullyInitialized) {
             $this->logger->log($priority, $logContent);
             return true;
@@ -71,13 +79,17 @@ class Kernel
             return false;
         }
     }
-
     public function initConfig()
     {
         $this->config = new ConfigManager(__CLASS__);
     }
+
+    /**
+     * @param $param
+     * @deprecated since version 0.1, to be removed in 1.0. Use new ConfigManager object
+     */
     public function returnConfig($param)
     {
-
+        trigger_error(sprintf('Function %s is deprecated!', __METHOD__));
     }
 }
