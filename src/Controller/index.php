@@ -12,8 +12,8 @@ class index extends Controller
 {
     public function indexPage()
     {
-        $kernel = new Kernel(KernelStartInfo::BOOT);
-        $kernel->log(LogLevel::KERNEL, 'System loaded.');
+       // $kernel = new Kernel(KernelStartInfo::BOOT);
+        //$kernel->log(LogLevel::KERNEL, 'System loaded.');
         return $this->render('index.html.twig', array(
             'title' => IndexTemplatesReturn::get('title'),
             'charset' => IndexTemplatesReturn::get('charset'),

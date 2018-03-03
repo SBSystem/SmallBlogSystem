@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+{% endblock %}
 {% block charset %}{{ charset }}{% endblock %}
 {% block authorMeta %}{{ pageAuthor }}{% endblock %}
 {% block generator %}{{ generator }}{% endblock %}
@@ -7,6 +10,12 @@
 
 {% block body %}
 
-    <h1>Hello World!</h1>
+    <button class="btn btn-success btn-large">Foo</button>
 
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 {% endblock %}

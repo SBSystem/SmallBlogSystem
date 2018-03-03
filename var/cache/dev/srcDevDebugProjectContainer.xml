@@ -112,6 +112,7 @@
     </service>
     <service id="App\SmallBlogSystem\Entity\UserEntity" class="App\SmallBlogSystem\Entity\UserEntity" public="false" autowire="true" autoconfigure="true"/>
     <service id="App\SmallBlogSystem\Entity\UserStatic" class="App\SmallBlogSystem\Entity\UserStatic" public="false" autowire="true" autoconfigure="true"/>
+    <service id="App\SmallBlogSystem\Exception\NoLevelException" class="App\SmallBlogSystem\Exception\NoLevelException" public="false" autowire="true" autoconfigure="true"/>
     <service id="App\SmallBlogSystem\Kernel" class="App\SmallBlogSystem\Kernel" public="false" autowire="true" autoconfigure="true"/>
     <service id="App\SmallBlogSystem\Level\KernelStartInfo" class="App\SmallBlogSystem\Level\KernelStartInfo" public="false" autowire="true" autoconfigure="true"/>
     <service id="App\SmallBlogSystem\Level\LogLevel" class="App\SmallBlogSystem\Level\LogLevel" public="false" autowire="true" autoconfigure="true"/>

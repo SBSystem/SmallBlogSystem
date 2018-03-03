@@ -7,6 +7,7 @@ Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Reso
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.annotations" (parent: cache.system).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.system_clearer" (parent: cache.default_clearer).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.global_clearer" (parent: cache.default_clearer).
+Symfony\Component\DependencyInjection\Compiler\AutowirePass: Skipping service "App\SmallBlogSystem\Exception\NoLevelException": Class or interface "App\SmallBlogSystem\Exception\NoLevelException" cannot be loaded.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "Psr\Container\ContainerInterface"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "Symfony\Component\DependencyInjection\ContainerInterface"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "Symfony\Component\EventDispatcher\EventDispatcherInterface"; reason: private alias.
@@ -89,6 +90,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.2m3e4be" to "service_locator.2m3e4be.twig.template_cache_warmer".
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "App\SmallBlogSystem\Entity\UserEntity"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "App\SmallBlogSystem\Entity\UserStatic"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "App\SmallBlogSystem\Exception\NoLevelException"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "App\SmallBlogSystem\Kernel"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "App\SmallBlogSystem\Level\KernelStartInfo"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "App\SmallBlogSystem\Level\LogLevel"; reason: unused.
