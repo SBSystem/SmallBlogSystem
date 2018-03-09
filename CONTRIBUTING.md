@@ -1,9 +1,9 @@
 # Zasady współpracy
 ## Zasady współpracy
-Jeżeli chcesz współpracować, i rowijać ten projekt powinieneś dołączyć do oorganizacji. Możesz to zrobić poprzez zgłoszenie swojej kandydatury w issue.
+Jeżeli chcesz współpracować, i rowijać ten projekt powinieneś dołączyć do organizacji. Możesz to zrobić poprzez zgłoszenie swojej kandydatury w issue.
 ## Zasady kodu
 ### PHP
-Kod PHP MUSI przestrzegać standard PSR-2.
+Kod PHP MUSI przestrzegać standardu PSR-2.
 # Informacje o współpracy
 ## Branche
 Jeżeli chcesz utworzyć nowy feature, powinieneś stworzyć nowego brancha korzystając z tego wzoru:
