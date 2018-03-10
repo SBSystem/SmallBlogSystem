@@ -12,11 +12,3 @@
 !var/sessions/.gitkeep
 /vendor
 .env
-###> phpunit/phpunit ###
-/phpunit.xml
-###< phpunit/phpunit ###
-
-###> symfony/phpunit-bridge ###
-.phpunit
-/phpunit.xml
-###< symfony/phpunit-bridge ###
