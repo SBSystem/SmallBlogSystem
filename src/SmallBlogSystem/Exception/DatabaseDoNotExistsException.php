@@ -4,7 +4,7 @@ namespace App\SmallBlogSystem\Exception;
 
 use Symfony\Component\Config\Definition\Exception\Exception;
 
-class DatabaseDoNotExistsException extends Exception
+class DatabaseDoNotExistsException extends \Exception
 {
     public function __construct($messageText)
     {
