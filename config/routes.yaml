@@ -1,6 +1,6 @@
 index:
     path: /index
-    defaults: { _controller: 'App\Controller\index::indexPage' }
+    defaults: { _controller: 'App\Controller\IndexController::indexPage' }
 adminDashboard:
     path: /admin/dashboard
-    defaults: { _controller: 'App\Controller\admin::dashboard' }
+    defaults: { _controller: 'App\Controller\AdminController::dashboard' }

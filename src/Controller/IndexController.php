@@ -9,7 +9,7 @@ use App\SmallBlogSystem\Managers\LogManager;
 use App\SmallBlogSystem\TemplatesReturn\IndexTemplatesReturn;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class index extends Controller
+class IndexController extends Controller
 {
     public function indexPage()
     {

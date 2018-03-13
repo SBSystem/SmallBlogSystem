@@ -1,17 +1,18 @@
 <?php
 
-namespace Controller;
+namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use App\SmallBlogSystem\TemplatesReturn\IndexTemplatesReturn;
+use Symfony\Component\HttpFoundation\Response;
 
-class admin extends Controller
+class AdminController extends Controller
 {
-    public function dashboard(AuthorizationCheckerInterface $auth)
+    public function dashboard(AuthorizationCheckerInterface $auth): Response
     {
-        if(false === $auth->isGranted('ROLE_ADMIN')) {
+        if($auth->isGranted('ROLE_ADMIN') === false) {
             throw new AccessDeniedException('Only users with admin previleges can see this page!');
         }
 
