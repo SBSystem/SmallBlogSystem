@@ -22,7 +22,7 @@ class User
      * @param String $username
      * @param String $role
      */
-    public function __construct(String $username, String $role): bool
+    public function __construct(String $username, String $role)
     {
         $this->username = $username;
         $this->role = $role;
