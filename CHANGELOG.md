@@ -1,5 +1,5 @@
 # Wersje
-## 0.1
+## 0.0.1
 ### Dodano
  * Dodano kernel aplikacji
  * Dodano managery
@@ -11,6 +11,16 @@
  * Dodano klasę zarządzającą configiem (bazowa manager)
  * Dodano klasę poziomu loggingu
  * Dodano klasę poziomu działania systemu (dla Kernela)
+ * Dodano .gitignore
+ * Dodano system ORM (Doctrine)
+ * Dodano komponent `security`
+ * Dodano `doctrine-maker`
+ * Dodano klasę `User`
+ * Dodano Entity
+### Zmieniono
+ * Zwracanie typów z `boolean` na `bool`
 ### Zdepecjonowano
  * Zdeprecjonowano funkcje odpowiadające za logging z <span style="color:blue">Kernela</span>
  * Zdeprecjonowano funkcje odpowiadające za pobieranie danych z configu z Kernela
+ ### Usunięto
+ * Katalog vendor
