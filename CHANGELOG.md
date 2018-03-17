@@ -19,6 +19,7 @@
  * Dodano Entity
  * Dodano testy dla klasy `Kernel`
  * Dodano zmienne globalne zwracające dane dla widoku
+ * Dodano `webpack`.
 ### Zmieniono
  * Zwracanie typów z `boolean` na `bool`
 ### Zdepecjonowano

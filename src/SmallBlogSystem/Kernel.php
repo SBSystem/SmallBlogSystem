@@ -7,12 +7,21 @@ use App\SmallBlogSystem\Managers\ConfigManager;
 use App\SmallBlogSystem\Managers\LogManager;
 use App\SmallBlogSystem\Level\LogLevel;
 
+/**
+ * Class Kernel
+ * @package App\SmallBlogSystem
+ * This class is basic class of system. It may loaded in every template.
+ */
 class Kernel
 {
     private $logger;
     private $config;
     protected $successfullyInitialized;
 
+    /**
+     * Kernel constructor.
+     * @param $info
+     */
     public function __construct($info)
     {
         $this->successfullyInitialized = false;
@@ -28,45 +37,71 @@ class Kernel
             $this->boot();
         }
     }
-    public function changeSystemStatus($kernelStatus)
+
+    /**
+     * @param $kernelStatus
+     * @return bool
+     */
+    public function changeSystemStatus($kernelStatus): bool
     {
         if ($kernelStatus === KernelStartInfo::BOOT) {
             $this->boot();
         } else if ($kernelStatus === KernelStartInfo::REBOOT) {
             $this->reboot();
+
         } else if ($kernelStatus === KernelStartInfo::SHUTDOWN) {
             $this->shutdown();
         } else {
             $this->boot();
         }
+        return true;
     }
-    protected function boot()
+
+    /**
+     * @return bool
+     */
+    protected function boot(): bool
     {
         $this->successfullyInitialized = true;
         $this->initLogger();
         $this->initConfig();
-
-    }
-    protected function reboot()
-    {
-        $this->shutdown();
-        $this->boot();
-    }
-    protected function shutdown()
-    {
-        $this->successfullyInitialized = false;
-    }
-
-    private function initLogger()
-    {
-        $this->logger = new LogManager();
-        $this->logger->log(LogLevel::KERNEL, 'System loaded.');
+        return true;
     }
 
     /**
-     * @param $priority, logContent
-     * @return boolean
-     * @deprecated since version 0.1, to be removed in 1.0. Use new ConfigManager object
+     * @return bool
+     */
+    protected function reboot(): bool
+    {
+        $this->shutdown();
+        $this->boot();
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function shutdown(): bool
+    {
+        $this->successfullyInitialized = false;
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    private function initLogger(): bool
+    {
+        $this->logger = new LogManager();
+        $this->logger->log(LogLevel::KERNEL, 'System loaded.');
+        return true;
+    }
+
+    /**
+     * @param $priority
+     * @param $logContent
+     * @return bool
+     * @deprecated since version 0.0.1, to be removed in 0.1. Use new ConfigManager object
      */
     public function log($priority, $logContent): bool
     {
@@ -79,17 +114,22 @@ class Kernel
             return false;
         }
     }
-    public function initConfig()
+    /**
+     * @return bool
+     */
+    public function initConfig(): bool
     {
         $this->config = new ConfigManager();
+        return true;
     }
-
     /**
      * @param $param
-     * @deprecated since version 0.1, to be removed in 1.0. Use new ConfigManager object
+     * @return bool
+     * @deprecated since version 0.0.1, to be removed in 0.1. Use new ConfigManager object.
      */
-    public function returnConfig($param)
+    public function returnConfig($param): bool
     {
         trigger_error(sprintf('Function %s is deprecated!', __METHOD__));
+        return true;
     }
 }
