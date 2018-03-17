@@ -6,8 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommentsRepository")
+ * @Orm\Table(name="comments")
  */
-class Comments
+class Comment
 {
     /**
      * @ORM\Id
