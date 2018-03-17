@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommentsRepository")
- * @ORM\Table
  */
 class Comments
 {
@@ -39,7 +38,9 @@ class Comments
 
     public function __construct()
     {
-        $this->createdDate = date("Y-m-d H:i:s");
+        $datetime = new Datetime();
+        $formatedDate = $datetime->format("Y-m-d H:i:s");
+        $this->createdDate = $formatedDate;
     }
     /**
      * @return int
@@ -102,22 +103,19 @@ class Comments
     {
         return $this->createdBy;
     }
-
+    /**
+     * @param String $createdUserId
+     * @return bool
+     */
+    public function setCreatedBy(String $createdUserId): void
+    {
+        $this->createdBy = $createdUserId;
+    }
     /**
      * @return string
      */
     public function getCreatedDate(): DateTime
     {
         return $this->createdDate;
-    }
-
-    /**
-     * @param String $createdDate
-     * @return bool
-     */
-    public function setCreatedDate(String $createdDate): bool
-    {
-        $this->createdDate = $createdDate;
-        return true;
     }
 }
