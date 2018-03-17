@@ -18,17 +18,17 @@ class Categories
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length="100")
      */
     private $categoryName;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length="30")
      */
     private $categoryShortName;
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId(): int
     {
