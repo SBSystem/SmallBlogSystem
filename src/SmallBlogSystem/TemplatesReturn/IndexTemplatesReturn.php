@@ -4,6 +4,11 @@ namespace App\SmallBlogSystem\TemplatesReturn;
 
 use App\SmallBlogSystem\Managers\config;
 
+/**
+ * Class IndexTemplatesReturn
+ * @package App\SmallBlogSystem\TemplatesReturn
+ * @deprecated since version 0.0.1 to be removed in 0.1. Use new TwigTemplatesConfig file.
+ */
 class IndexTemplatesReturn extends BasicTemplatesReturn
 {
     const ARRAY_INFO = array(

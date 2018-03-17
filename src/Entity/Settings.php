@@ -26,38 +26,30 @@ class Settings
      */
     private $value;
 
-    
+
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $value
+     * @param String $name
+     * @return bool
      */
-    public function setName($name)
+    public function setName(String $name): bool
     {
         $this->name = $name;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getValue()
+    public function getValue(): string
     {
         return $this->value;
     }
-
-    /**
-     * @param mixed $value
-     */
-    public function setBlocked($value)
-    {
-        $this->value = $value;
-    }
-
-
 }

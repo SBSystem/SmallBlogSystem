@@ -57,147 +57,165 @@ class Users
     private $blocked;
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $id
+     * @param int $id
+     * @return int
      */
-    public function setId($id)
+    public function setId(int $id): bool
     {
         $this->id = $id;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->username;
     }
 
     /**
-     * @param mixed $username
+     * @param String $username
+     * @return bool
      */
-    public function setUsername($username)
+    public function setUsername(String $username): bool
     {
         $this->username = $username;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->password;
     }
 
     /**
-     * @param mixed $password
+     * @param String $password
+     * @return bool
      */
-    public function setPassword($password)
+    public function setPassword(String $password): bool
     {
         $this->password = $password;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMail()
+    public function getMail(): string
     {
         return $this->mail;
     }
 
     /**
-     * @param mixed $mail
+     * @param String $mail
+     * @return bool
      */
-    public function setMail($mail)
+    public function setMail(String $mail): bool
     {
         $this->mail = $mail;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getRegistrationDate()
+    public function getRegistrationDate(): string
     {
         return $this->registrationDate;
     }
 
     /**
-     * @param mixed $registrationDate
+     * @param String $registrationDate
+     * @return bool
      */
-    public function setRegistrationDate($registrationDate)
+    public function setRegistrationDate(String $registrationDate): bool
     {
         $this->registrationDate = $registrationDate;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getAvatar()
+    public function getAvatar(): string
     {
         return $this->avatar;
     }
 
     /**
-     * @param mixed $avatar
+     * @param String $avatar
+     * @return bool
      */
-    public function setAvatar($avatar)
+    public function setAvatar(String $avatar): bool
     {
         $this->avatar = $avatar;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getRole()
+    public function getRole(): string
     {
         return $this->role;
     }
 
     /**
-     * @param mixed $role
+     * @param String $role
+     * @return string
      */
-    public function setRole($role)
+    public function setRole(String $role): string
     {
         $this->role = $role;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getCode()
+    public function getCode(): int
     {
         return $this->code;
     }
 
     /**
-     * @param mixed $code
+     * @param int $code
+     * @return bool
      */
-    public function setCode($code)
+    public function setCode(int $code): bool
     {
         $this->code = $code;
+        return true;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getBlocked()
+    public function getBlocked(): int
     {
         return $this->blocked;
     }
 
     /**
-     * @param mixed $blocked
+     * @param int $blocked
+     * @return bool
      */
-    public function setBlocked($blocked)
+    public function setBlocked(int $blocked): bool
     {
         $this->blocked = $blocked;
+        return true;
     }
 
 
