@@ -39,10 +39,9 @@ class Categories
      * @param int $id
      * @return bool
      */
-    public function setId(int $id): bool
+    public function setId(int $id): void
     {
         $this->id = $id;
-        return true;
     }
 
     /**
@@ -57,10 +56,9 @@ class Categories
      * @param String $categoryName
      * @return bool
      */
-    public function setCategoryName(String $categoryName): bool
+    public function setCategoryName(String $categoryName): void
     {
         $this->categoryName = $categoryName;
-        return true;
     }
 
     /**
@@ -75,9 +73,8 @@ class Categories
      * @param String $categoryShortName
      * @return bool
      */
-    public function setCategoryShortName(String $categoryShortName): bool
+    public function setCategoryShortName(String $categoryShortName): void
     {
         $this->categoryShortName = $categoryShortName;
-        return true;
     }
 }
