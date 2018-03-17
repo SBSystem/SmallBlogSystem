@@ -5,7 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-use SmallBlogSystem\TemplatesReturn\TwigTemplatesConfig;
+use App\SmallBlogSystem\TemplatesReturn\TwigTemplatesConfig;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminController extends Controller
@@ -16,7 +16,7 @@ class AdminController extends Controller
             throw new AccessDeniedException('Only users with admin previleges can see this page!');
         }
 
-        return $this->render('adminDashboard.html.twig', array(
+        return $this->render('admin/adminDashboard.html.twig', array(
             'title' => TwigTemplatesConfig::TITLE,
             'charset' => TwigTemplatesConfig::CHARSET,
             'pageAuthor' => TwigTemplatesConfig::PAGE_AUTHOR,

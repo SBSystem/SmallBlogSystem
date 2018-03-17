@@ -1,6 +1,6 @@
 <?php
 
-namespace SmallBlogSystem\TemplatesReturn;
+namespace App\SmallBlogSystem\TemplatesReturn;
 
 /**
  * Class TwigTemplatesConfig

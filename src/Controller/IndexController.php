@@ -7,7 +7,7 @@ use App\SmallBlogSystem\Level\KernelStartInfo;
 use App\SmallBlogSystem\Level\LogLevel;
 use App\SmallBlogSystem\Managers\LogManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use SmallBlogSystem\TemplatesReturn\TwigTemplatesConfig;
+use App\SmallBlogSystem\TemplatesReturn\TwigTemplatesConfig;
 
 class IndexController extends Controller
 {

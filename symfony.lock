@@ -167,6 +167,9 @@
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
     },
+    "symfony/asset": {
+        "version": "v3.4.6"
+    },
     "symfony/cache": {
         "version": "v3.4.4"
     },
@@ -215,6 +218,9 @@
             "ref": "cc1afd81841db36fbef982fe56b48ade6716fac4"
         }
     },
+    "symfony/form": {
+        "version": "v3.4.6"
+    },
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -233,6 +239,9 @@
     "symfony/inflector": {
         "version": "v3.4.6"
     },
+    "symfony/intl": {
+        "version": "v3.4.6"
+    },
     "symfony/lts": {
         "version": "v3"
     },
@@ -244,6 +253,9 @@
             "version": "1.0",
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
+    },
+    "symfony/options-resolver": {
+        "version": "v3.4.6"
     },
     "symfony/orm-pack": {
         "version": "v1.0.5"
@@ -258,6 +270,9 @@
         }
     },
     "symfony/polyfill-apcu": {
+        "version": "v1.7.0"
+    },
+    "symfony/polyfill-intl-icu": {
         "version": "v1.7.0"
     },
     "symfony/polyfill-mbstring": {
