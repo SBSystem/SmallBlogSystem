@@ -65,16 +65,6 @@ class Users
     }
 
     /**
-     * @param int $id
-     * @return int
-     */
-    public function setId(int $id): bool
-    {
-        $this->id = $id;
-        return true;
-    }
-
-    /**
      * @return string
      */
     public function getUsername(): string
