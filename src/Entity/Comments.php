@@ -39,7 +39,7 @@ class Comments
 
     public function __construct()
     {
-        $this->createdBy = date("Y-m-d H:i:s");
+        $this->createdDate = date("Y-m-d H:i:s");
     }
     /**
      * @return int
@@ -98,7 +98,7 @@ class Comments
     /**
      * @return string
      */
-    public function getCreatedBy(): DateTime
+    public function getCreatedBy(): string
     {
         return $this->createdBy;
     }
@@ -106,7 +106,7 @@ class Comments
     /**
      * @return string
      */
-    public function getCreatedDate(): string
+    public function getCreatedDate(): DateTime
     {
         return $this->createdDate;
     }
