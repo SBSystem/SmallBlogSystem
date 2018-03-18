@@ -7,6 +7,15 @@ index2:
 adminDashboard:
     path: /admin/dashboard
     defaults: { _controller: 'App\Controller\AdminController::dashboard' }
+adminAddPost:
+    path: /admin/post/add
+    defaults: { _controller: 'App\Controller\PostController::addPostPage' }
+adminEditPost:
+    path: /admin/post/edit
+    defaults: { _controller: 'App\Controller\PostController::editPostPage' }
+adminRemovePost:
+    path: /admin/post/remove
+    defaults: { _controller: 'App\Controller\PostController::removePostPage' }
 login:
     path: /login
     defaults: { _controller: 'App\Controller\AuthController::login' }
