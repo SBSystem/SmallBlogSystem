@@ -1,6 +1,21 @@
 index:
     path: /
     defaults: { _controller: 'App\Controller\IndexController::indexPage' }
+index2:
+    path: /index
+    defaults: { _controller: 'App\Controller\IndexController::indexPage' }
+index3:
+    path: /start
+    defaults: { _controller: 'App\Controller\IndexController::indexPage' }
+login:
+    path: /login
+    defaults: { _controller: 'App\Controller\IndexController::loginPage' }
+logout:
+    path: /logout
+    defaults: { _controller: 'App\Controller\IndexController::logout' }
+remindPsswd:
+    path: /remind
+    defaults: { _controller: 'App\Controller\IndexController::remindPassword' }
 adminDashboard:
     path: /admin/dashboard
     defaults: { _controller: 'App\Controller\AdminController::dashboard' }
