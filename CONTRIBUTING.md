@@ -3,6 +3,7 @@
 Jeżeli chcesz współpracować, i rowijać ten projekt powinieneś dołączyć do organizacji. Możesz to zrobić poprzez zgłoszenie swojej kandydatury w issue.
 ## Zasady kodu
 ### PHP
+Kod PHP MUSI przestrzegać standardu PSR-1.
 Kod PHP MUSI przestrzegać standardu PSR-2.
 # Informacje o współpracy
 ## Branche
